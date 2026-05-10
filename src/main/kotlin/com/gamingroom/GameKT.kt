@@ -5,4 +5,4 @@ package com.gamingroom
  * @since 5/10/2026
  */
 
-data class Game(val id: Long, val name: String)
+//data class GameKT(val id: Long, val name: String)

@@ -1,4 +1,4 @@
-package gamingroom;
+package com.gamingroom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +14,14 @@ public class GameService {
 	/**
 	 * A list of the active games
 	 */
-	private static List<Game> games = new ArrayList<Game>();
+	private static List<Game> games = new ArrayList<>();
 
 	/*
-	 * Holds the next game identifier
+	 * Holds the next game, player and team identifier
 	 */
 	private static long nextGameId = 1;
+	private static long nextPlayerId = 1;
+	private static long nextTeamId = 1;
 
 	// Internal variable to hold the singleton instance
 	private static GameService gameService = null;
@@ -144,4 +146,16 @@ public class GameService {
 	public int getGameCount() {
 		return games.size();
 	}
+
+	/**
+	 * Get the next team unique identifier.
+	 * @return The next team id.
+	 */
+	public static long getNextTeamId() {return nextTeamId++;}
+
+	/**
+	 * Get the next player unique identifier.
+	 * @return The next player id.
+	 */
+	public static long getNextPlayerId() {return nextPlayerId++;}
 }

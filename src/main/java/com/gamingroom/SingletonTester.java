@@ -1,4 +1,4 @@
-package gamingroom;
+package com.gamingroom;
 
 /**
  * A class to test a singleton's behavior
