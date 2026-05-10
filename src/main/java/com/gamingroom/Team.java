@@ -34,12 +34,9 @@ public class Team extends Entity {
 	 * @param name The name of the player to add.
 	 * @return the player instance (new or existing).
 	 */
-	public Player  addPlayer(String name) {
-		Player player = null;
-		Iterator<Player> iterator = players.iterator();
-
-
+	public Player addPlayer(String name) {
 		// Iterate through the player to find if a player with same with the name already exists.
+		Iterator<Player> iterator = players.iterator();
 		while (iterator.hasNext()) {
 			Player temp = iterator.next();
 			if(temp.getName().equals(name)) {
@@ -49,12 +46,10 @@ public class Team extends Entity {
 		}
 
 		// If player does not exist, then add it to the current team.
-		if(player == null) {
-			player = new Player(GameService.getNextPlayerId(), name);
-			players.add(player);
-		}
-
-		// return Player
+		Player player = new Player(GameService.getNextPlayerId(), name);
+		// Add player to our list
+		players.add(player);
+		// return the new player
 		return player;
 	}
 

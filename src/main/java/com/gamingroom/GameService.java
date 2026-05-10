@@ -52,14 +52,10 @@ public class GameService {
 	 * @return the game instance (new or existing)
 	 */
 	public Game addGame(String name) {
-
-		// a local game instance
-		Game game = null;
-
 		// Use iterator to look for existing game with same name
 		// if found, simply return the existing instance
 		Iterator<Game> gamesIterator = games.iterator();
-		
+
 		// The Iterator pattern allows us to traverse the 'games' list without exposing the
 		// underlying ArrayList structure, providing a safe way to search for existing records.
 		while(gamesIterator.hasNext()){
@@ -69,12 +65,10 @@ public class GameService {
 		}
 		 
 		// if not found, make a new game instance and add to list of games
-		if (game == null) {
-			game = new Game(nextGameId++, name);
+			Game game = new Game(nextGameId++, name);
 			games.add(game);
-		}
 
-		// return the new/existing game instance to the caller
+		// Return the new game instance
 		return game;
 	}
 

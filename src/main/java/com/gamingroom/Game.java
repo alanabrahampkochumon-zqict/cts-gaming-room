@@ -21,25 +21,22 @@ public class Game extends Entity {
 	 * @return the team instance (new or existing).
 	 */
 	public Team  addTeam(String name) {
-		Team team = null;
-		Iterator<Team> iterator = teams.iterator();
 
 		// Iterate through the teams to find if a team with same with the name already exists.
+		Iterator<Team> iterator = teams.iterator();
 		while (iterator.hasNext()) {
 			Team temp = iterator.next();
 			if(temp.getName().equals(name)) {
 				// Early exit and return the team.
-				return team;
+				return temp;
 			}
 		}
 
 		// If player does not exist, then add it to the current team.
-		if(team == null) {
-			team = new Team(GameService.getNextTeamId(), name);
-			teams.add(team);
-		}
-
-		// Return the team.
+		Team team = new Team(GameService.getNextTeamId(), name);
+		// Add the team to our existing list
+		teams.add(team);
+		// Return the new team.
 		return team;
 	}
 
