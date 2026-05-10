@@ -1,4 +1,4 @@
-package com.gamingroom;
+package gamingroom;
 
 import java.util.ArrayList;
 import java.util.List;

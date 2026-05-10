@@ -1,4 +1,4 @@
-package com.gamingroom;
+package gamingroom;
 
 /**
  * A simple class to hold information about a player

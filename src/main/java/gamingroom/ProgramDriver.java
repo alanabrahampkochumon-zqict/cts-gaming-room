@@ -1,4 +1,4 @@
-package com.gamingroom;
+package gamingroom;
 
 /**
  * Application start-up program

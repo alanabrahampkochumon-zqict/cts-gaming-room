@@ -1,34 +1,25 @@
-package com.gamingroom;
+package gamingroom;
 
 /**
- * A simple class to hold information about a game
- * 
+ * A simple class to hold information about a team
  * <p>
  * Notice the overloaded constructor that requires
  * an id and name to be passed when creating.
  * Also note that no mutators (setters) defined so
- * these values cannot be changed once a game is
+ * these values cannot be changed once a team is
  * created.
  * </p>
- * 
  * @author coce@snhu.edu
  *
  */
-public class Game {
+public class Team {
 	long id;
 	String name;
 	
-	/**
-	 * Hide the default constructor to prevent creating empty instances.
-	 */
-	private Game() {
-	}
-
-	/**
+	/*
 	 * Constructor with an identifier and name
 	 */
-	public Game(long id, String name) {
-		this();
+	public Team(long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
@@ -49,8 +40,6 @@ public class Game {
 
 	@Override
 	public String toString() {
-		
-		return "Game [id=" + id + ", name=" + name + "]";
+		return "Team [id=" + id + ", name=" + name + "]";
 	}
-
 }

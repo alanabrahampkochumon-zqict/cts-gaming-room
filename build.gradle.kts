@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.3.20"
 }
 
-group = "org.gamingroom"
+group = "com.gamingroom"
 version = "1.0-SNAPSHOT"
 
 repositories {
